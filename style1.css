@@ -1,0 +1,30 @@
+.page{display: grid;
+     height: 100vh;
+    background-color:#eee;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: 80px auto ;
+    grid-template-areas:
+    "titre titre titre titre titre titre titre titre titre titre"
+    "cont cont cont  cont cont cont cont cont cont cont"
+   
+    ;
+}
+h1{grid-area: titre;
+background-color: gray;
+text-align: center;}
+
+h2{text-align: center;
+animation-name: color;
+animation-duration: 2s;
+animation-iteration-count: infinite;}
+
+.content{grid-area: cont;
+    background-color: #dcdcdc;
+   }
+ @keyframes color{
+ 0%{color: gray;}
+ 25%{color: rgba(128, 128, 128, 0.781);}
+ 75%{color:rgba(128, 128, 128, 0.39)}
+ 100%{color:rgba(128, 128, 128, 0.082);}
+
+ }
